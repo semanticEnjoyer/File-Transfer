@@ -1,0 +1,22 @@
+name: test_capture
+description: Capture screenshots and videos on your phone, add notes and priority, and send them to your PC over Wi-Fi.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+  flutter: '>=3.32.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^2.1.4
+  image_picker: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
