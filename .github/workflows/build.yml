@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: test_capture
+
 jobs:
   android:
     name: Android APK
@@ -27,7 +31,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: TestCapture-android
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: test_capture/build/app/outputs/flutter-apk/app-release.apk
 
   windows:
     name: Windows app
@@ -46,4 +50,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: TestCapture-windows
-          path: build/windows/x64/runner/Release/
+          path: test_capture/build/windows/x64/runner/Release/
